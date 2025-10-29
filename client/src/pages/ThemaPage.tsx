@@ -396,6 +396,60 @@ const themaContent: Record<string, {
       'Kritiek op huidig beleid (behalve GroenLinks-PvdA)'
     ],
     verschillen: 'BIJ1 meest radicaal met open grenzen. SP enige met concreet cijfer (40.000/jaar). GroenLinks-PvdA kiest voor Europese aanpak. PvdD focust op oorzaken zoals klimaat.'
+  },
+  samenleving: {
+    bij1: {
+      standpunten: [
+        'Antiracisme als kernwaarde in alle beleid',
+        'Dekolonisatie van instituties en onderwijs',
+        'Volledige gelijkheid voor LHBTQIA+ personen',
+        'Strijd tegen discriminatie op alle fronten',
+        'Reparaties voor slavernijverleden',
+        'Afschaffing van Zwarte Piet',
+        'Inclusief taalgebruik en representatie'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
+    pvdd: {
+      standpunten: [
+        'Respect voor alle levende wezens (mensen én dieren)',
+        'Verbod op religieuze slacht zonder verdoving',
+        'Dierenwelzijn als maatschappelijke norm',
+        'Educatie over empathie en zorgzaamheid',
+        'Minder consumptie, meer welzijn',
+        'Gezonde en plantaardige voeding stimuleren'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
+    sp: {
+      standpunten: [
+        'Versterking sociale zekerheid voor iedereen',
+        'Bestrijding van armoede en ongelijkheid',
+        'Toegankelijke publieke voorzieningen',
+        'Gelijke kansen ongeacht afkomst',
+        'Bescherming van arbeidsrechten',
+        'Solidariteit als leidend principe'
+      ],
+      kosten: 'Onderdeel van bredere sociale programma\'s'
+    },
+    glpvda: {
+      standpunten: [
+        'Inclusieve samenleving met gelijke kansen',
+        'Bestrijding discriminatie en racisme',
+        'Versterking sociale cohesie',
+        'Investeringen in achterstandswijken',
+        'Emancipatie en gelijke rechten',
+        'Balans tussen vrijheid en verantwoordelijkheid'
+      ],
+      kosten: '€3-5 miljard voor sociale programma\'s (CPB)'
+    },
+    overeenkomsten: [
+      'Alle partijen willen discriminatie bestrijden',
+      'Focus op gelijke kansen voor iedereen',
+      'Versterking sociale voorzieningen',
+      'Aandacht voor kwetsbare groepen'
+    ],
+    verschillen: 'BIJ1 meest radicaal met dekolonisatie en reparaties. PvdD uniek met focus op dierenwelzijn als onderdeel van samenleving. SP focust op economische gelijkheid. GL-PvdA zoekt balans tussen progressieve waarden en brede maatschappelijke steun.'
   }
 };
 

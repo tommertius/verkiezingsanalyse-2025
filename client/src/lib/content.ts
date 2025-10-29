@@ -81,6 +81,12 @@ export const themas = [
     titel: 'Migratie',
     icon: '🛂',
     beschrijving: 'Asielbeleid en arbeidsmigratie'
+  },
+  {
+    id: 'samenleving',
+    titel: 'Samenleving & Inclusie',
+    icon: '🤝',
+    beschrijving: 'Inclusie, diversiteit, normen en waarden'
   }
 ];
 

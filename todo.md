@@ -67,3 +67,9 @@
 
 ## Volgorde Aanpassen
 - [x] Wijzig partijvolgorde naar: BIJ1, PvdD, SP, GroenLinks-PvdA (van radicaal naar gematigd)
+
+## Nieuw Thema: Samenleving & Inclusie
+- [x] Analyseer standpunten over inclusie, diversiteit en normen/waarden
+- [x] Voeg thema toe aan content.ts
+- [x] Voeg thema card toe aan homepage (automatisch via themas array)
+- [x] Maak themapagina voor Samenleving & Inclusie
