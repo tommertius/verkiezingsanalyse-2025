@@ -471,6 +471,12 @@ export default function ThemaPage() {
                     </th>
                     <th className="border p-3 text-left font-semibold w-1/4">
                       <div className="flex items-center justify-between">
+                        <span>PvdD</span>
+                        <Badge variant="outline" className="ml-2 text-xs">Ecocentrisch</Badge>
+                      </div>
+                    </th>
+                    <th className="border p-3 text-left font-semibold w-1/4">
+                      <div className="flex items-center justify-between">
                         <span>SP</span>
                         <Badge variant="outline" className="ml-2 text-xs">Socialistisch</Badge>
                       </div>
@@ -479,12 +485,6 @@ export default function ThemaPage() {
                       <div className="flex items-center justify-between">
                         <span>GL-PvdA</span>
                         <Badge variant="outline" className="ml-2 text-xs">Progressief</Badge>
-                      </div>
-                    </th>
-                    <th className="border p-3 text-left font-semibold w-1/4">
-                      <div className="flex items-center justify-between">
-                        <span>PvdD</span>
-                        <Badge variant="outline" className="ml-2 text-xs">Ecocentrisch</Badge>
                       </div>
                     </th>
                   </tr>
@@ -510,6 +510,23 @@ export default function ThemaPage() {
                     </td>
                     <td className="border p-4 align-top bg-muted/20">
                       <ul className="space-y-2 text-sm">
+                        {content.pvdd.standpunten.map((punt, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-primary flex-shrink-0">•</span>
+                            <span>{punt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {content.pvdd.kosten && (
+                        <div className="mt-4 pt-3 border-t">
+                          <p className="text-sm font-semibold text-muted-foreground">
+                            {content.pvdd.kosten}
+                          </p>
+                        </div>
+                      )}
+                    </td>
+                    <td className="border p-4 align-top">
+                      <ul className="space-y-2 text-sm">
                         {content.sp.standpunten.map((punt, i) => (
                           <li key={i} className="flex gap-2">
                             <span className="text-primary flex-shrink-0">•</span>
@@ -525,7 +542,7 @@ export default function ThemaPage() {
                         </div>
                       )}
                     </td>
-                    <td className="border p-4 align-top">
+                    <td className="border p-4 align-top bg-muted/20">
                       <ul className="space-y-2 text-sm">
                         {content.glpvda.standpunten.map((punt, i) => (
                           <li key={i} className="flex gap-2">
@@ -538,23 +555,6 @@ export default function ThemaPage() {
                         <div className="mt-4 pt-3 border-t">
                           <p className="text-sm font-semibold text-muted-foreground">
                             {content.glpvda.kosten}
-                          </p>
-                        </div>
-                      )}
-                    </td>
-                    <td className="border p-4 align-top bg-muted/20">
-                      <ul className="space-y-2 text-sm">
-                        {content.pvdd.standpunten.map((punt, i) => (
-                          <li key={i} className="flex gap-2">
-                            <span className="text-primary flex-shrink-0">•</span>
-                            <span>{punt}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      {content.pvdd.kosten && (
-                        <div className="mt-4 pt-3 border-t">
-                          <p className="text-sm font-semibold text-muted-foreground">
-                            {content.pvdd.kosten}
                           </p>
                         </div>
                       )}

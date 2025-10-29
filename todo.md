@@ -64,3 +64,6 @@
 - [x] Update alle thema pagina's met PvdD kolom
 - [x] Zoek peilingdata voor PvdD (2-4 zetels)
 - [x] Update financiële analyse pagina met PvdD
+
+## Volgorde Aanpassen
+- [x] Wijzig partijvolgorde naar: BIJ1, PvdD, SP, GroenLinks-PvdA (van radicaal naar gematigd)

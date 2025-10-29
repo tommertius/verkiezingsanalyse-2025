@@ -8,6 +8,14 @@ export const partijen = [
     haalbaarheid: 'Niet haalbaar'
   },
   {
+    id: 'pvdd',
+    naam: 'Partij voor de Dieren',
+    kleur: '#00A650',
+    ideologie: 'Ecocentrisch',
+    financieleScore: 3,
+    haalbaarheid: 'Onzeker'
+  },
+  {
     id: 'sp',
     naam: 'SP',
     kleur: '#FF4444',
@@ -22,14 +30,6 @@ export const partijen = [
     ideologie: 'Progressief',
     financieleScore: 9,
     haalbaarheid: 'Haalbaar'
-  },
-  {
-    id: 'pvdd',
-    naam: 'Partij voor de Dieren',
-    kleur: '#00A650',
-    ideologie: 'Ecocentrisch',
-    financieleScore: 3,
-    haalbaarheid: 'Onzeker'
   }
 ];
 

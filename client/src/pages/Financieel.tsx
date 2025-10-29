@@ -41,36 +41,6 @@ export default function Financieel() {
                   </thead>
                   <tbody>
                     <tr className="border-b">
-                      <td className="p-2 font-semibold">GroenLinks-PvdA</td>
-                      <td className="p-2">
-                        <Badge>CPB (officieel)</Badge>
-                      </td>
-                      <td className="text-right p-2">+€15,0 mld</td>
-                      <td className="text-right p-2">+€13,2 mld</td>
-                      <td className="text-right p-2 text-green-600 font-semibold">-€1,8 mld</td>
-                      <td className="text-center p-2">
-                        <span className="inline-flex items-center gap-1 font-bold text-green-600">
-                          <CheckCircle2 className="h-4 w-4" />
-                          9/10
-                        </span>
-                      </td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="p-2 font-semibold">SP</td>
-                      <td className="p-2">
-                        <Badge variant="secondary">ESB (onafhankelijk)</Badge>
-                      </td>
-                      <td className="text-right p-2">+€40 mld</td>
-                      <td className="text-right p-2">+€18 mld</td>
-                      <td className="text-right p-2 text-red-600 font-semibold">-€23 mld</td>
-                      <td className="text-center p-2">
-                        <span className="inline-flex items-center gap-1 font-bold text-orange-600">
-                          <AlertCircle className="h-4 w-4" />
-                          4/10
-                        </span>
-                      </td>
-                    </tr>
-                    <tr className="border-b">
                       <td className="p-2 font-semibold">BIJ1</td>
                       <td className="p-2">
                         <Badge variant="outline">Geen</Badge>
@@ -97,6 +67,36 @@ export default function Financieel() {
                         <span className="inline-flex items-center gap-1 font-bold text-orange-600">
                           <AlertCircle className="h-4 w-4" />
                           3/10
+                        </span>
+                      </td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="p-2 font-semibold">SP</td>
+                      <td className="p-2">
+                        <Badge variant="secondary">ESB (onafhankelijk)</Badge>
+                      </td>
+                      <td className="text-right p-2">+€40 mld</td>
+                      <td className="text-right p-2">+€18 mld</td>
+                      <td className="text-right p-2 text-red-600 font-semibold">-€23 mld</td>
+                      <td className="text-center p-2">
+                        <span className="inline-flex items-center gap-1 font-bold text-orange-600">
+                          <AlertCircle className="h-4 w-4" />
+                          4/10
+                        </span>
+                      </td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="p-2 font-semibold">GroenLinks-PvdA</td>
+                      <td className="p-2">
+                        <Badge>CPB (officieel)</Badge>
+                      </td>
+                      <td className="text-right p-2">+€15,0 mld</td>
+                      <td className="text-right p-2">+€13,2 mld</td>
+                      <td className="text-right p-2 text-green-600 font-semibold">-€1,8 mld</td>
+                      <td className="text-center p-2">
+                        <span className="inline-flex items-center gap-1 font-bold text-green-600">
+                          <CheckCircle2 className="h-4 w-4" />
+                          9/10
                         </span>
                       </td>
                     </tr>
