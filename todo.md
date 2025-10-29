@@ -115,3 +115,6 @@
 - [x] Thema detailpagina: illustratie rechts naast titel
 - [x] Thema detailpagina: 4x2 grid onderaan met illustraties en titels
 - [x] Kopieer wonen-v4 naar public folder
+
+## Illustraties Update
+- [x] Vervang illustraties met transparante achtergrond versies
