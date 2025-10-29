@@ -638,14 +638,12 @@ export default function ThemaPage() {
               {themas.filter(t => t.id !== themaId).map((t) => (
                 <Link key={t.id} href={`/thema/${t.id}`}>
                   <div className="group cursor-pointer flex items-center gap-3 p-3 rounded-sm hover:bg-muted/50 transition-colors">
-                    <div className="bg-gray-100 rounded-sm overflow-hidden w-16 h-12 flex-shrink-0 relative">
-                      <div className="absolute bottom-0 left-0 right-0 h-[70%] overflow-hidden">
-                        <img 
-                          src={`/illustrations/${t.id}.png`} 
-                          alt={t.titel}
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
+                    <div className="bg-gray-100 rounded-sm overflow-hidden w-16 h-16 flex-shrink-0">
+                      <img 
+                        src={`/illustrations/${t.id}.png`} 
+                        alt={t.titel}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
                     <span className="text-sm font-medium">{t.titel}</span>
                   </div>
