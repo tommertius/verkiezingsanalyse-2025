@@ -118,3 +118,9 @@
 
 ## Illustraties Update
 - [x] Vervang illustraties met transparante achtergrond versies
+
+## Thema Cards Verbetering
+- [x] Maak cards smaller (max-w-5xl container)
+- [x] Verklein ruimte tussen tekst en illustratie (pb-2)
+- [x] Laat meer van illustratie zien (80% ipv 70%, object-contain)
+- [x] Voeg hover underline toe onder tekst

@@ -392,17 +392,17 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">
             Verken de Thema's
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {themas.map((thema) => (
               <Link key={thema.id} href={`/thema/${thema.id}`}>
                 <div className="group cursor-pointer">
-                  <div className="bg-gray-100 rounded-sm overflow-hidden aspect-[4/3] relative">
-                    <h3 className="text-2xl font-bold p-6 relative z-10">{thema.titel}</h3>
-                    <div className="absolute bottom-0 left-0 right-0 h-[70%] overflow-hidden">
+                  <div className="bg-gray-100 rounded-sm overflow-hidden aspect-[3/4] relative">
+                    <h3 className="text-2xl font-bold p-4 pb-2 relative z-10 group-hover:underline decoration-2 underline-offset-4 transition-all">{thema.titel}</h3>
+                    <div className="absolute bottom-0 left-0 right-0 h-[80%] overflow-hidden">
                       <img 
                         src={`/illustrations/${thema.id}.png`} 
                         alt={thema.titel}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-contain object-bottom group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   </div>
