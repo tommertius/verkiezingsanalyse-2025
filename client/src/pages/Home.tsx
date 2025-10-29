@@ -5,8 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import { partijen, themas, ideologischeVerschillen, financieleScores, kamerImpact } from '@/lib/content';
 import { ArrowRight, CheckCircle2, XCircle, AlertCircle, ExternalLink } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
+  const { t } = useLanguage();
   return (
     <Layout>
       {/* Hero Section */}
@@ -14,24 +16,24 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Verkiezingsprogramma's 2025
+              {t('Verkiezingsprogramma\'s 2025', 'Election Manifestos 2025')}
             </h1>
             <p className="text-xl text-muted-foreground mb-6">
-              Diepgaande analyse van BIJ1, SP, GroenLinks-PvdA en Partij voor de Dieren
+              {t('Diepgaande analyse van BIJ1, SP, GroenLinks-PvdA en Partij voor de Dieren', 'In-depth analysis of BIJ1, SP, GroenLinks-PvdA and Party for the Animals')}
             </p>
             <p className="text-lg mb-8">
-              Waar staan deze partijen voor? Hoe verschillen ze ideologisch? En wat is financieel haalbaar?
+              {t('Waar staan deze partijen voor? Hoe verschillen ze ideologisch? En wat is financieel haalbaar?', 'What do these parties stand for? How do they differ ideologically? And what is financially feasible?')}
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link href="/financieel">
                 <Button size="lg" className="gap-2">
-                  Financiële Analyse
+                  {t('Financiële Analyse', 'Financial Analysis')}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/thema/wonen">
                 <Button size="lg" variant="outline" className="gap-2">
-                  Bekijk Thema's
+                  {t('Verken Thema\'s', 'Explore Themes')}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -44,7 +46,7 @@ export default function Home() {
       <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
-            Hoe Verschillen de Partijen Ideologisch?
+            {t('Hoe verschillen de partijen ideologisch?', 'How Do the Parties Differ Ideologically?')}
           </h2>
           
           {/* Desktop: Grid */}
@@ -137,7 +139,7 @@ export default function Home() {
                 );
               })}
             </div>
-            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe om te vergelijken →</p>
+            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe to compare →</p>
           </div>
 
           <div className="mt-8 text-center">
@@ -150,14 +152,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Financiële Haalbaarheid */}
+      {/* Financiële Feasibleheid */}
       <section className="py-20 md:py-24 bg-muted/30">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">
-            Realisme en Financiële Haalbaarheid
+            {t('Realisme en Financiële Haalbaarheid', 'Realism and Financial Feasibility')}
           </h2>
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Gebaseerd op CPB-doorrekening (GroenLinks-PvdA) en ESB-doorrekening (SP)
+            {t('Gebaseerd op CPB-doorrekening (GroenLinks-PvdA) en ESB-doorrekening (SP)', 'Based on CPB assessment (GroenLinks-PvdA) and ESB assessment (SP)')}
           </p>
           
           {/* Desktop: Grid */}
@@ -256,13 +258,13 @@ export default function Home() {
                 );
               })}
             </div>
-            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe om te vergelijken →</p>
+            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe to compare →</p>
           </div>
 
           <div className="mt-8 text-center">
             <Link href="/financieel">
               <Button size="lg" variant="outline" className="gap-2">
-                Volledige Financiële Analyse
+                Volledige Financial Analysis
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -274,10 +276,10 @@ export default function Home() {
       <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">
-            Wat Betekenen Ze in de Kamer?
+            {t('Wat betekenen ze in de Kamer?', 'What Do They Mean in Parliament?')}
           </h2>
           <p className="text-center text-muted-foreground mb-2 max-w-2xl mx-auto">
-            Vooral voor kleine, activistische partijen: welke onderwerpen komen op de agenda?
+            {t('Vooral voor kleine, activistische partijen: welke onderwerpen komen op de agenda?', 'Especially for small, activist parties: which topics come on the agenda?')}
           </p>
           <p className="text-center text-sm mb-8">
             <a 
@@ -381,7 +383,7 @@ export default function Home() {
                 );
               })}
             </div>
-            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe om te vergelijken →</p>
+            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe to compare →</p>
           </div>
         </div>
       </section>
@@ -390,19 +392,19 @@ export default function Home() {
       <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
-            Verken de Thema's
+            {t('Verken de Thema\'s', 'Explore the Themes')}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {themas.map((thema) => (
               <Link key={thema.id} href={`/thema/${thema.id}`}>
                 <div className="group cursor-pointer">
-                  <div className="bg-gray-100 rounded-sm overflow-hidden aspect-[4/3] relative">
-                    <h3 className="text-2xl font-bold p-6 relative z-10">{thema.titel}</h3>
-                    <div className="absolute bottom-0 left-0 right-0 h-[70%] overflow-hidden">
+                  <div className="bg-gray-100 rounded-sm overflow-hidden aspect-[3/4] relative">
+                    <h3 className="text-2xl font-bold p-4 pb-2 relative z-10 group-hover:underline decoration-2 underline-offset-4 transition-all">{(thema as any).titelEN && t(thema.titel, (thema as any).titelEN) || thema.titel}</h3>
+                    <div className="absolute bottom-0 left-0 right-0 h-[80%] overflow-hidden">
                       <img 
                         src={`/illustrations/${thema.id}.png`} 
                         alt={thema.titel}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-contain object-bottom group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   </div>
@@ -413,11 +415,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick Comparison: Belastingen Bedrijven */}
+      {/* Quick Comparison: Taxation Bedrijven */}
       <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
-            Belastingen voor Bedrijven
+            {t('Belastingen voor Bedrijven', 'Corporate Taxation')}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -456,7 +458,7 @@ export default function Home() {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>• Hoger VPB-tarief (gematigd)</li>
                     <li>• Vermogensbelasting (breed)</li>
-                    <li>• Klimaatheffingen (+€4,5 mld)</li>
+                    <li>• Climateheffingen (+€4,5 mld)</li>
                     <li>• Maar: betere financiering en R&D-stimulering</li>
                   </ul>
                 </CardContent>
@@ -465,7 +467,7 @@ export default function Home() {
             <div className="mt-6 text-center">
               <Link href="/thema/belastingen">
                 <Button variant="outline" className="gap-2">
-                  Volledige Analyse Belastingen
+                  Volledige Analyse Taxation
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -478,7 +480,7 @@ export default function Home() {
       <section className="py-20 md:py-24 bg-muted/30">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
-            Oplossen Wooncrisis
+            {t('De Wooncrisis Oplossen', 'Solving the Housing Crisis')}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -528,7 +530,7 @@ export default function Home() {
             <div className="mt-6 text-center">
               <Link href="/thema/wonen">
                 <Button variant="outline" className="gap-2">
-                  Volledige Analyse Wonen
+                  Volledige Analyse Housing
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>

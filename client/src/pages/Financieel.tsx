@@ -2,21 +2,23 @@ import Layout from '@/components/Layout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle2, XCircle, AlertCircle } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Financieel() {
+  const { t } = useLanguage();
   return (
     <Layout>
       <div className="py-12">
         <div className="article-container">
-          <h1 className="text-4xl font-bold mb-4">Financiële Haalbaarheid</h1>
+          <h1 className="text-4xl font-bold mb-4">{t('Financiële Haalbaarheid', 'Financial Feasibility')}</h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Analyse op basis van CPB-doorrekening (GroenLinks-PvdA) en ESB-doorrekening (SP)
+            {t('Analyse op basis van CPB-doorrekening (GroenLinks-PvdA) en ESB-doorrekening (SP)', 'Analysis based on CPB assessment (GroenLinks-PvdA) and ESB assessment (SP)')}
           </p>
 
           {/* Executive Summary */}
           <Card className="mb-8 border-2 border-primary/20">
             <CardHeader>
-              <CardTitle>Samenvatting</CardTitle>
+              <CardTitle>{t('Samenvatting', 'Summary')}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p>

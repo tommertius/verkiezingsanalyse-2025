@@ -37,56 +37,74 @@ export const themas = [
   {
     id: 'wonen',
     titel: 'Wonen',
+    titelEN: 'Housing',
     icon: '🏠',
-    beschrijving: 'Hoe pakken de partijen de wooncrisis aan?'
+    beschrijving: 'Hoe pakken de partijen de wooncrisis aan?',
+    beschrijvingEN: 'How do the parties tackle the housing crisis?'
   },
   {
     id: 'zorg',
     titel: 'Zorg',
+    titelEN: 'Healthcare',
     icon: '🏥',
-    beschrijving: 'Plannen voor betaalbare en toegankelijke zorg'
+    beschrijving: 'Plannen voor betaalbare en toegankelijke zorg',
+    beschrijvingEN: 'Plans for affordable and accessible healthcare'
   },
   {
     id: 'werk-loon',
     titel: 'Werk & Loon',
+    titelEN: 'Work & Wages',
     icon: '💼',
-    beschrijving: 'Minimumloon, arbeidsvoorwaarden en sociale zekerheid'
+    beschrijving: 'Minimumloon, arbeidsvoorwaarden en sociale zekerheid',
+    beschrijvingEN: 'Minimum wage, working conditions and social security'
   },
   {
     id: 'belastingen',
     titel: 'Belastingen',
+    titelEN: 'Taxation',
     icon: '💰',
-    beschrijving: 'Wie betaalt wat? Vermogen, inkomen en bedrijven'
+    beschrijving: 'Wie betaalt wat? Vermogen, inkomen en bedrijven',
+    beschrijvingEN: 'Who pays what? Wealth, income and corporations'
   },
   {
     id: 'onderwijs',
     titel: 'Onderwijs',
+    titelEN: 'Education',
     icon: '📚',
-    beschrijving: 'Investeringen in onderwijs en studiekosten'
+    beschrijving: 'Investeringen in onderwijs en studiekosten',
+    beschrijvingEN: 'Investments in education and study costs'
   },
   {
     id: 'klimaat',
     titel: 'Klimaat',
+    titelEN: 'Climate',
     icon: '🌍',
-    beschrijving: 'Klimaatambities en energietransitie'
+    beschrijving: 'Klimaatambities en energietransitie',
+    beschrijvingEN: 'Climate ambitions and energy transition'
   },
   {
     id: 'buitenland',
     titel: 'Buitenland',
+    titelEN: 'Foreign Affairs',
     icon: '🌐',
-    beschrijving: 'Defensie, NAVO en internationale samenwerking'
+    beschrijving: 'Defensie, NAVO en internationale samenwerking',
+    beschrijvingEN: 'Defense, NATO and international cooperation'
   },
   {
     id: 'migratie',
     titel: 'Migratie',
+    titelEN: 'Migration',
     icon: '🛂',
-    beschrijving: 'Asielbeleid en arbeidsmigratie'
+    beschrijving: 'Asielbeleid en arbeidsmigratie',
+    beschrijvingEN: 'Asylum policy and labor migration'
   },
   {
     id: 'samenleving',
     titel: 'Samenleving & Inclusie',
+    titelEN: 'Society & Inclusion',
     icon: '🤝',
-    beschrijving: 'Inclusie, diversiteit, normen en waarden'
+    beschrijving: 'Inclusie, diversiteit, normen en waarden',
+    beschrijvingEN: 'Inclusion, diversity, norms and values'
   }
 ];
 

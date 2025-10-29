@@ -6,6 +6,7 @@ import { themas } from '@/lib/content';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // Content per thema
 const themaContent: Record<string, {
@@ -454,6 +455,7 @@ const themaContent: Record<string, {
 };
 
 export default function ThemaPage() {
+  const { t } = useLanguage();
   const [, params] = useRoute('/thema/:thema');
   const themaId = params?.thema || '';
   
@@ -464,7 +466,7 @@ export default function ThemaPage() {
     return (
       <Layout>
         <div className="container py-12">
-          <p>Thema niet gevonden</p>
+          <p>{t('Thema niet gevonden', 'Theme not found')}</p>
         </div>
       </Layout>
     );
@@ -477,14 +479,14 @@ export default function ThemaPage() {
           <Link href="/">
             <Button variant="ghost" className="mb-4 gap-2">
               <ArrowLeft className="h-4 w-4" />
-              Terug naar home
+              {t('Terug naar home', 'Back to home')}
             </Button>
           </Link>
 
           <div className="mb-8 flex items-center gap-8">
             <div className="flex-1">
-              <h1 className="text-4xl font-bold mb-2">{thema.titel}</h1>
-              <p className="text-xl text-muted-foreground">{thema.beschrijving}</p>
+              <h1 className="text-4xl font-bold mb-2">{(thema as any).titelEN ? t(thema.titel, (thema as any).titelEN) : thema.titel}</h1>
+              <p className="text-xl text-muted-foreground">{(thema as any).beschrijvingEN ? t(thema.beschrijving, (thema as any).beschrijvingEN) : thema.beschrijving}</p>
             </div>
             <div className="hidden md:block flex-shrink-0">
               <div className="bg-gray-100 rounded-sm overflow-hidden w-48 h-36 relative">
@@ -502,7 +504,7 @@ export default function ThemaPage() {
           {/* Overeenkomsten */}
           <Card className="mb-8 bg-primary/5 border-primary/20">
             <CardHeader>
-              <CardTitle>Gemeenschappelijke Grond</CardTitle>
+              <CardTitle>{t('Gemeenschappelijke Grond', 'Common Ground')}</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2">
@@ -518,13 +520,13 @@ export default function ThemaPage() {
 
           {/* Verschillen */}
           <div className="mb-8 p-4 bg-muted/50 rounded-lg border">
-            <h3 className="font-semibold mb-2">Belangrijkste Verschillen</h3>
+            <h3 className="font-semibold mb-2">{t('Belangrijkste Verschillen', 'Key Differences')}</h3>
             <p className="text-muted-foreground">{content.verschillen}</p>
           </div>
 
           {/* Vergelijkingstabel - 4 kolommen */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Standpunten per Partij</h2>
+            <h2 className="text-2xl font-bold mb-4">{t('Standpunten per Partij', 'Positions per Party')}</h2>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse min-w-[800px]">
                 <thead>
@@ -633,21 +635,19 @@ export default function ThemaPage() {
 
           {/* Navigation to other themes - 4x2 grid with illustrations */}
           <div className="mt-12 pt-8 border-t">
-            <h3 className="font-semibold mb-4">Andere Thema's</h3>
+            <h3 className="font-semibold mb-4">{t('Andere Thema\'s', 'Other Themes')}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {themas.filter(t => t.id !== themaId).map((t) => (
-                <Link key={t.id} href={`/thema/${t.id}`}>
+              {themas.filter(thm => thm.id !== themaId).map((thm) => (
+                <Link key={thm.id} href={`/thema/${thm.id}`}>
                   <div className="group cursor-pointer flex items-center gap-3 p-3 rounded-sm hover:bg-muted/50 transition-colors">
-                    <div className="bg-gray-100 rounded-sm overflow-hidden w-16 h-12 flex-shrink-0 relative">
-                      <div className="absolute bottom-0 left-0 right-0 h-[70%] overflow-hidden">
-                        <img 
-                          src={`/illustrations/${t.id}.png`} 
-                          alt={t.titel}
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
+                    <div className="bg-gray-100 rounded-sm overflow-hidden w-16 h-16 flex-shrink-0">
+                      <img 
+                        src={`/illustrations/${thm.id}.png`} 
+                        alt={thm.titel}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                    <span className="text-sm font-medium">{t.titel}</span>
+                    <span className="text-sm font-medium">{(thm as any).titelEN ? t(thm.titel, (thm as any).titelEN) : thm.titel}</span>
                   </div>
                 </Link>
               ))}

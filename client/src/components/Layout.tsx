@@ -1,29 +1,34 @@
 import { Link, useLocation } from 'wouter';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from './ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Financiële Analyse', href: '/financieel' },
-  {
-    name: 'Thema\'s',
-    children: [
-      { name: 'Wonen', href: '/thema/wonen' },
-      { name: 'Zorg', href: '/thema/zorg' },
-      { name: 'Werk & Loon', href: '/thema/werk-loon' },
-      { name: 'Belastingen', href: '/thema/belastingen' },
-      { name: 'Onderwijs', href: '/thema/onderwijs' },
-      { name: 'Klimaat', href: '/thema/klimaat' },
-      { name: 'Buitenland', href: '/thema/buitenland' },
-      { name: 'Migratie', href: '/thema/migratie' },
-    ],
-  },
-];
+// Navigation will be generated dynamically with translations
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+  const { language, setLanguage, t } = useLanguage();
+
+  const navigation = [
+    { name: t('Home', 'Home'), href: '/' },
+    { name: t('Financiële Analyse', 'Financial Analysis'), href: '/financieel' },
+    {
+      name: t('Thema\'s', 'Themes'),
+      children: [
+        { name: t('Wonen', 'Housing'), href: '/thema/wonen' },
+        { name: t('Zorg', 'Healthcare'), href: '/thema/zorg' },
+        { name: t('Werk & Loon', 'Work & Wages'), href: '/thema/werk-loon' },
+        { name: t('Belastingen', 'Taxation'), href: '/thema/belastingen' },
+        { name: t('Onderwijs', 'Education'), href: '/thema/onderwijs' },
+        { name: t('Klimaat', 'Climate'), href: '/thema/klimaat' },
+        { name: t('Buitenland', 'Foreign Affairs'), href: '/thema/buitenland' },
+        { name: t('Migratie', 'Migration'), href: '/thema/migratie' },
+        { name: t('Samenleving & Inclusie', 'Society & Inclusion'), href: '/thema/samenleving' },
+      ],
+    },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -44,7 +49,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-4">
+              {/* Language Switcher */}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setLanguage(language === 'nl' ? 'en' : 'nl')}
+                className="gap-2"
+              >
+                <Globe className="h-4 w-4" />
+                {language.toUpperCase()}
+              </Button>
               {navigation.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.children ? (
@@ -148,30 +163,34 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-semibold mb-2">Over deze analyse</h3>
+              <h3 className="font-semibold mb-2">{t('Over deze analyse', 'About this analysis')}</h3>
               <p className="text-sm text-muted-foreground">
-                Onafhankelijke analyse van de verkiezingsprogramma's van BIJ1,
-                SP en GroenLinks-PvdA voor de Tweede Kamerverkiezingen 2025.
+                {t(
+                  'Onafhankelijke analyse van de verkiezingsprogramma\'s van BIJ1, SP, GroenLinks-PvdA en Partij voor de Dieren voor de Tweede Kamerverkiezingen 2025.',
+                  'Independent analysis of the election manifestos of BIJ1, SP, GroenLinks-PvdA and Party for the Animals for the 2025 parliamentary elections.'
+                )}
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Bronnen</h3>
+              <h3 className="font-semibold mb-2">{t('Bronnen', 'Sources')}</h3>
               <ul className="text-sm text-muted-foreground space-y-1">
-                <li>CPB - Keuzes in Kaart 2027-2030</li>
-                <li>ESB - Doorrekening SP (Wim Suyker)</li>
-                <li>Officiële verkiezingsprogramma's</li>
+                <li>{t('CPB - Keuzes in Kaart 2027-2030', 'CPB - Choices Mapped 2027-2030')}</li>
+                <li>{t('ESB - Doorrekening SP (Wim Suyker)', 'ESB - SP Assessment (Wim Suyker)')}</li>
+                <li>{t('Officiële verkiezingsprogramma\'s', 'Official election manifestos')}</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Disclaimer</h3>
+              <h3 className="font-semibold mb-2">{t('Disclaimer', 'Disclaimer')}</h3>
               <p className="text-sm text-muted-foreground">
-                Deze analyse is gebaseerd op openbare bronnen en onafhankelijke
-                doorrekeningen. Interpretaties zijn van de auteur.
+                {t(
+                  'Deze analyse is gebaseerd op openbare bronnen en onafhankelijke doorrekeningen. Interpretaties zijn van de auteur.',
+                  'This analysis is based on public sources and independent assessments. Interpretations are those of the author.'
+                )}
               </p>
             </div>
           </div>
           <div className="mt-8 pt-4 border-t border-border text-center text-sm text-muted-foreground">
-            © 2025 Verkiezingsanalyse | Gemaakt met Manus AI
+            {t('© 2025 Verkiezingsanalyse | Gemaakt met Manus AI', '© 2025 Election Analysis | Made with Manus AI')}
           </div>
         </div>
       </footer>

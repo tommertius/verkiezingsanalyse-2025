@@ -118,3 +118,42 @@
 
 ## Illustraties Update
 - [x] Vervang illustraties met transparante achtergrond versies
+
+## Thema Cards Verbetering
+- [x] Maak cards smaller (max-w-5xl container)
+- [x] Verklein ruimte tussen tekst en illustratie (pb-2)
+- [x] Laat meer van illustratie zien (80% ipv 70%, object-contain)
+- [x] Voeg hover underline toe onder tekst
+
+## Engelse Vertaling
+- [x] Vertaal homepage naar Engels
+- [x] Vertaal themapagina titels naar Engels
+- [x] Vertaal financiële analyse pagina titel naar Engels
+
+## Full English Translation (In Progress)
+- [ ] Translate all content in content.ts (parties, themes, financial data)
+- [ ] Translate navigation and UI elements
+- [ ] Translate theme page content sections (commonalities, differences)
+- [ ] Translate financial analysis page content
+- [ ] Test English version thoroughly
+- [ ] Create checkpoint for English translation
+- [ ] Commit to GitHub with tag v2.5-english-translation
+
+## Taalschakelaar (Language Switcher)
+- [x] Implementeer taalcontext met Nederlands en Engels
+- [x] Voeg taalschakelaar toe aan header
+- [x] Vertaal alleen titels en hoofdelementen naar Engels
+- [x] Laat gedetailleerde content in Nederlands
+- [x] Test taalschakelaar functionaliteit
+
+## Taalschakelaar Verbeteringen
+- [x] Wijzig label logica: NL site toont "NL", EN site toont "EN"
+- [x] Vertaal alle thema titels in homepage cards
+- [x] Vertaal thema titels in menu dropdown
+- [x] Vertaal thema titels op detailpagina's
+- [x] Vertaal intro teksten op themapagina's
+- [x] Vertaal volledige navigatie
+- [x] Vertaal volledige footer
+
+## Bug Fixes
+- [x] Scroll to top when navigating to new page
