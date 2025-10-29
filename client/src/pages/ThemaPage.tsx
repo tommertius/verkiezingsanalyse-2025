@@ -481,10 +481,22 @@ export default function ThemaPage() {
             </Button>
           </Link>
 
-          <div className="mb-8">
-            <div className="text-4xl mb-2">{thema.icon}</div>
-            <h1 className="text-4xl font-bold mb-2">{thema.titel}</h1>
-            <p className="text-xl text-muted-foreground">{thema.beschrijving}</p>
+          <div className="mb-8 flex items-center gap-8">
+            <div className="flex-1">
+              <h1 className="text-4xl font-bold mb-2">{thema.titel}</h1>
+              <p className="text-xl text-muted-foreground">{thema.beschrijving}</p>
+            </div>
+            <div className="hidden md:block flex-shrink-0">
+              <div className="bg-gray-100 rounded-sm overflow-hidden w-48 h-36 relative">
+                <div className="absolute bottom-0 left-0 right-0 h-[70%] overflow-hidden">
+                  <img 
+                    src={`/illustrations/${themaId}.png`} 
+                    alt={thema.titel}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Overeenkomsten */}
@@ -619,20 +631,24 @@ export default function ThemaPage() {
             </div>
           </div>
 
-          {/* Navigation to other themes - Pill shaped buttons */}
+          {/* Navigation to other themes - 4x2 grid with illustrations */}
           <div className="mt-12 pt-8 border-t">
             <h3 className="font-semibold mb-4">Andere Thema's</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {themas.filter(t => t.id !== themaId).map((t) => (
                 <Link key={t.id} href={`/thema/${t.id}`}>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="rounded-full gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    <span>{t.icon}</span>
-                    <span>{t.titel}</span>
-                  </Button>
+                  <div className="group cursor-pointer flex items-center gap-3 p-3 rounded-sm hover:bg-muted/50 transition-colors">
+                    <div className="bg-gray-100 rounded-sm overflow-hidden w-16 h-12 flex-shrink-0 relative">
+                      <div className="absolute bottom-0 left-0 right-0 h-[70%] overflow-hidden">
+                        <img 
+                          src={`/illustrations/${t.id}.png`} 
+                          alt={t.titel}
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <span className="text-sm font-medium">{t.titel}</span>
+                  </div>
                 </Link>
               ))}
             </div>

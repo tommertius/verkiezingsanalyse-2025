@@ -387,23 +387,26 @@ export default function Home() {
       </section>
 
       {/* Thema's Grid */}
-      <section className="py-20 md:py-24 bg-muted/30">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Verken de Thema's
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {themas.map((thema) => (
               <Link key={thema.id} href={`/thema/${thema.id}`}>
-                <Card className="hover:shadow-lg transition-all cursor-pointer border hover:border-primary/50 h-full">
-                  <CardHeader>
-                    <div className="text-4xl mb-2">{thema.icon}</div>
-                    <CardTitle className="text-lg">{thema.titel}</CardTitle>
-                    <CardDescription className="text-sm">
-                      {thema.beschrijving}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
+                <div className="group cursor-pointer">
+                  <div className="bg-gray-100 rounded-sm overflow-hidden aspect-[4/3] relative">
+                    <h3 className="text-2xl font-bold p-6 relative z-10">{thema.titel}</h3>
+                    <div className="absolute bottom-0 left-0 right-0 h-[70%] overflow-hidden">
+                      <img 
+                        src={`/illustrations/${thema.id}.png`} 
+                        alt={thema.titel}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
