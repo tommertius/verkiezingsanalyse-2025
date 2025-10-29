@@ -22,6 +22,14 @@ export const partijen = [
     ideologie: 'Progressief',
     financieleScore: 9,
     haalbaarheid: 'Haalbaar'
+  },
+  {
+    id: 'pvdd',
+    naam: 'Partij voor de Dieren',
+    kleur: '#00A650',
+    ideologie: 'Ecocentrisch',
+    financieleScore: 3,
+    haalbaarheid: 'Onzeker'
   }
 ];
 
@@ -109,6 +117,17 @@ export const ideologischeVerschillen = {
       'Klimaatneutraal in 2040',
       'Europese aanpak migratie'
     ]
+  },
+  pvdd: {
+    kernwaarden: ['Dierenrechten', 'Klimaatrechtvaardigheid', 'Ecosysteem centraal'],
+    positie: 'Ecocentrisch - welzijn boven welvaart',
+    kenmerken: [
+      'Radicale verkleining bio-industrie',
+      'Behoeften van dieren voorop',
+      'Maximaal 1,5 graad opwarming (Parijs)',
+      'BTW op gezond eten naar 0%',
+      'Vrede en internationale samenwerking'
+    ]
   }
 };
 
@@ -136,6 +155,14 @@ export const financieleScores = {
     tekort: 'EMU-saldo verbetert met 0,2%-punt',
     doorrekening: 'CPB (officieel)',
     oordeel: 'Haalbaar - enige programma met positief saldo-effect door macro-economische doorwerking'
+  },
+  pvdd: {
+    score: 3,
+    uitgaven: 'Onbekend',
+    inkomsten: 'Onbekend',
+    tekort: 'Onbekend',
+    doorrekening: 'Geen',
+    oordeel: 'Onzeker - geen cijfers, focus op systeemverandering en welzijn boven welvaart'
   }
 };
 
@@ -178,5 +205,18 @@ export const kamerImpact = {
       'Progressieve belastinghervorming'
     ],
     effect: 'Een van de grootste partijen met 22-26 zetels. Realistische kans op regeringsdeelname of gedoogconstructie, kan daadwerkelijk beleid beïnvloeden. Nek-aan-nek race met D66 en PVV.'
+  },
+  pvdd: {
+    zetels: '2-4 zetels (Peilingwijzer 28 okt)',
+    peilingUrl: 'https://peilingwijzer.tomlouwerse.nl/',
+    rol: 'Themapartij met focus op dieren en klimaat',
+    agendapunten: [
+      'Dierenrechten en welzijn op de agenda',
+      'Radicale verkleining bio-industrie',
+      'Klimaat en natuurbescherming',
+      'Gezond en plantaardig eten stimuleren',
+      'Voorkomen nieuwe pandemieën'
+    ],
+    effect: 'Brengt dierenrechten en ecosysteem-denken in het debat. Zet bio-industrie en klimaat op de agenda vanuit uniek ecocentrisch perspectief. Stabiele fractie van 2-4 zetels.'
   }
 };

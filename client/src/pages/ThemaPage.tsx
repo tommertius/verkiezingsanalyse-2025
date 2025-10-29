@@ -12,6 +12,7 @@ const themaContent: Record<string, {
   bij1: { standpunten: string[]; kosten?: string };
   sp: { standpunten: string[]; kosten?: string };
   glpvda: { standpunten: string[]; kosten?: string };
+  pvdd: { standpunten: string[]; kosten?: string };
   overeenkomsten: string[];
   verschillen: string;
 }> = {
@@ -45,13 +46,23 @@ const themaContent: Record<string, {
       ],
       kosten: 'Onderdeel van totaalpakket (€15 mld)'
     },
+    pvdd: {
+      standpunten: [
+        'Alle huren bevriezen per 1 juli 2025',
+        'Wet betaalbare huur in middensegment',
+        'Duurzame woningen stimuleren',
+        'Hulp voor huiseigenaren om woningen duurzamer te maken',
+        'Betaalbaar wonen voor iedereen'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
     overeenkomsten: [
-      'Alle drie willen 1 miljoen nieuwe (sociale) woningen',
-      'Focus op betaalbaarheid en toegankelijkheid',
-      'Kritiek op marktwerking in de woningmarkt',
-      'Meer macht voor woningcorporaties'
+      'Alle partijen willen betaalbaar wonen',
+      'Huren beperken of bevriezen',
+      'Focus op toegankelijkheid',
+      'Duurzaamheid stimuleren'
     ],
-    verschillen: 'BIJ1 wil de vrije huursector volledig afschaffen en een huurprijsplafond invoeren. De SP zet in op een groot Nationaal Woonfonds van €30 miljard. GroenLinks-PvdA kiest voor een gematigder aanpak met leningen, garanties en fiscale maatregelen zoals afbouw van de hypotheekrenteaftrek.'
+    verschillen: 'BIJ1 wil de vrije huursector volledig afschaffen. SP zet in op €30 miljard Woonfonds. GroenLinks-PvdA kiest voor leningen en garanties. PvdD focust op huurbevriezing en duurzaamheid.'
   },
   zorg: {
     bij1: {
@@ -83,13 +94,23 @@ const themaContent: Record<string, {
       ],
       kosten: '€1,9 miljard'
     },
+    pvdd: {
+      standpunten: [
+        'BTW op groenten en fruit naar 0% voor gezond eten',
+        'Gezond, plantaardig en biologisch eten in ziekenhuizen',
+        'Preventie van pandemieën door verkleining bio-industrie',
+        'Ministerie Volksgezondheid verantwoordelijk voor zoönoses',
+        'Verbod op reclame voor ongezond eten gericht op kinderen'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
     overeenkomsten: [
-      'Afschaffing of beperking eigen risico',
-      'Uitbreiding basispakket (mondzorg, fysiotherapie)',
-      'Kritiek op marktwerking in de zorg',
-      'Meer publieke controle'
+      'Preventie belangrijker maken',
+      'Gezond eten stimuleren',
+      'Toegankelijkheid vergroten',
+      'Kritiek op commercialisering'
     ],
-    verschillen: 'BIJ1 en SP willen volledige nationalisatie met een Nationaal ZorgFonds. De SP heeft dit het meest uitgewerkt met €35 miljard extra per jaar. GroenLinks-PvdA kiest voor hervorming binnen het bestaande systeem met pakketuitbreidingen en lagere drempels.'
+    verschillen: 'BIJ1 en SP willen Nationaal ZorgFonds. GroenLinks-PvdA hervormt binnen systeem. PvdD focust uniek op preventie via gezond eten en verkleining bio-industrie tegen pandemieën.'
   },
   'werk-loon': {
     bij1: {
@@ -121,13 +142,23 @@ const themaContent: Record<string, {
       ],
       kosten: 'Onderdeel van totaalpakket'
     },
+    pvdd: {
+      standpunten: [
+        'Omscholen naar duurzame banen met inkomensbescherming',
+        'Werkzekerheid in duurzame sectoren',
+        'Investeren in zinvolle, duurzame banen',
+        'Geen specifiek minimumloon genoemd',
+        'Focus op transitie naar groene economie'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
     overeenkomsten: [
-      'Hoger minimumloon',
-      'Versterking sociale zekerheid',
+      'Hoger minimumloon (behalve PvdD: geen cijfer)',
+      'Werkzekerheid vergroten',
       'Meer rechten voor werknemers',
-      'Kritiek op flexibilisering arbeidsmarkt'
+      'Kritiek op flexibilisering'
     ],
-    verschillen: 'BIJ1 is het meest radicaal met €19/uur en 30-urige werkweek. De SP wil €18/uur (kost €16 miljard) en AOW-leeftijd naar 65 jaar. GroenLinks-PvdA kiest voor gematigde verhoging van 5,7% en fiscale hervormingen.'
+    verschillen: 'BIJ1 wil €19/uur en 30-urige week. SP wil €18/uur (€16 mld). GroenLinks-PvdA kiest voor 5,7% verhoging. PvdD noemt geen bedrag maar focust op groene banen.'
   },
   belastingen: {
     bij1: {
@@ -160,13 +191,23 @@ const themaContent: Record<string, {
       ],
       kosten: '€13,2 miljard inkomsten'
     },
+    pvdd: {
+      standpunten: [
+        'CO₂-belasting omhoog',
+        'Gratis uitstootrechten verdwijnen',
+        'Veevoederbedrijven, slachthuizen en banken betalen mee aan natuurherstel',
+        'BTW op gezond eten (groenten, fruit, peulvruchten) naar 0%',
+        'Bedrijven zuiniger met grondstoffen'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
     overeenkomsten: [
       'Hogere belasting op vermogen',
-      'Hogere belasting op bedrijfswinsten',
-      'Lastenverlichting voor lagere inkomens',
+      'BTW-verlaging op (gezond) eten',
+      'Bedrijven meer laten bijdragen',
       'Progressiever belastingstelsel'
     ],
-    verschillen: 'BIJ1 heeft 100% marginaal tarief (leidt tot kapitaalvlucht). SP heeft hoogste VPB-tarief in Europa (35,6%) met groot risico op bedrijfsvlucht. GroenLinks-PvdA kiest voor brede vermogensbelasting zonder extreme tarieven.'
+    verschillen: 'BIJ1 heeft 100% tarief. SP heeft hoogste VPB (35,6%). GroenLinks-PvdA kiest voor brede vermogensbelasting. PvdD focust uniek op CO₂ en bio-industrie.'
   },
   onderwijs: {
     bij1: {
@@ -198,13 +239,23 @@ const themaContent: Record<string, {
       ],
       kosten: '€3,0 miljard'
     },
+    pvdd: {
+      standpunten: [
+        'Jongeren vanaf 16 jaar mogen stemmen',
+        'Politiek en recht beter uitleggen aan jongeren',
+        'Schoolmoestuinen en lesprogramma\'s over gezond eten',
+        'Leren over natuur en duurzaamheid',
+        'Kennis voor de toekomst'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
     overeenkomsten: [
       'Meer investeringen in onderwijs',
-      'Kleinere klassen',
-      'Betere arbeidsvoorwaarden leraren',
-      'Toegankelijkheid vergroten'
+      'Toegankelijkheid vergroten',
+      'Betere kwaliteit',
+      'Focus op toekomst'
     ],
-    verschillen: 'Alle partijen willen meer investeren in onderwijs. GroenLinks-PvdA investeert het meest (€3,0 miljard) met focus op alle sectoren. SP richt zich op concrete maatregelen zoals kleinere klassen. BIJ1 benadrukt dekolonisatie van het curriculum.'
+    verschillen: 'Alle partijen investeren in onderwijs. GroenLinks-PvdA investeert meest (€3 mld). SP focust op kleinere klassen. PvdD benadrukt uniek natuur- en duurzaamheidseducatie.'
   },
   klimaat: {
     bij1: {
@@ -236,13 +287,23 @@ const themaContent: Record<string, {
       ],
       kosten: '€5,0 miljard (klimaat en milieu)'
     },
+    pvdd: {
+      standpunten: [
+        'Maximaal 1,5 graad opwarming (Parijs-akkoord)',
+        'Fossiele bedrijven aanpakken',
+        'Veel nieuwe bossen en duingebieden planten',
+        'Verbod op houtkap in bestaande bossen',
+        'Lokale en regionale productie stimuleren'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
     overeenkomsten: [
       'Ambitieus klimaatbeleid',
-      'Sociale rechtvaardigheid in transitie',
-      'Kritiek op fossiele industrie',
-      'Investeringen in duurzaamheid'
+      'Afbouw fossiel',
+      'Sociale rechtvaardigheid',
+      'Natuur beschermen'
     ],
-    verschillen: 'GroenLinks-PvdA heeft de meest concrete klimaatdoelen (2040) en grootste financiële inzet (€5 miljard). SP en BIJ1 benadrukken sociale rechtvaardigheid sterker. BIJ1 is het meest radicaal met verbod op korte vluchten.'
+    verschillen: 'GroenLinks-PvdA heeft concreetste doel (2040) en grootste inzet (€5 mld). SP en BIJ1 willen gratis OV. PvdD benadrukt uniek bossen en natuurherstel.'
   },
   buitenland: {
     bij1: {
@@ -274,12 +335,22 @@ const themaContent: Record<string, {
       ],
       kosten: '€6,3 miljard (defensie), €1,5 miljard (internationale samenwerking)'
     },
+    pvdd: {
+      standpunten: [
+        'Strengere regels tegen buitenlandse beïnvloeding maatschappelijke organisaties',
+        'Groene, eerlijke en diervriendelijke wereld',
+        'Vrede en internationale samenwerking',
+        'Geen specifiek NAVO-standpunt in eenvoudige versie',
+        'Focus op internationale verbondenheid'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
     overeenkomsten: [
-      'Ontwikkelingshulp verhogen',
-      'Internationale solidariteit',
-      'Kritiek op wapenhandel (BIJ1 en SP)'
+      'Internationale samenwerking (op verschillende manieren)',
+      'Ontwikkelingshulp (behalve BIJ1 en PvdD: geen cijfer)',
+      'Vrede nastreven'
     ],
-    verschillen: 'Het grootste verschil tussen de partijen. BIJ1 wil NAVO verlaten, SP wil NAVO opheffen maar blijft voorlopig lid, GroenLinks-PvdA steunt NAVO en verhoogt defensie-uitgaven met €6,3-8,4 miljard. Dit is een fundamenteel ideologisch verschil.'
+    verschillen: 'Grootste verschil: BIJ1 wil NAVO verlaten, SP wil NAVO opheffen, GroenLinks-PvdA steunt NAVO (+€6,3 mld defensie), PvdD geen duidelijk standpunt maar focust op vrede.'
   },
   migratie: {
     bij1: {
@@ -309,12 +380,22 @@ const themaContent: Record<string, {
         'Integratie en participatie'
       ]
     },
+    pvdd: {
+      standpunten: [
+        'Aanpak van oorzaken migratie (klimaat, conflict)',
+        'Menswaardige behandeling vluchtelingen',
+        'Geen specifieke cijfers of quota genoemd',
+        'Focus op structurele oplossingen',
+        'Internationale samenwerking'
+      ],
+      kosten: 'Geen specifieke kosten genoemd'
+    },
     overeenkomsten: [
-      'Menswaardige opvang vluchtelingen',
-      'Kritiek op huidige asielbeleid',
-      'Aandacht voor oorzaken migratie'
+      'Menswaardige opvang',
+      'Oorzaken aanpakken',
+      'Kritiek op huidig beleid (behalve GroenLinks-PvdA)'
     ],
-    verschillen: 'BIJ1 is het meest radicaal met "geen mens is illegaal" en open grenzen. SP is de enige partij met een concreet migratiesaldo (40.000/jaar) en benadrukt arbeidsmigratie. GroenLinks-PvdA kiest voor Europese aanpak binnen bestaande kaders.'
+    verschillen: 'BIJ1 meest radicaal met open grenzen. SP enige met concreet cijfer (40.000/jaar). GroenLinks-PvdA kiest voor Europese aanpak. PvdD focust op oorzaken zoals klimaat.'
   }
 };
 
@@ -338,7 +419,7 @@ export default function ThemaPage() {
   return (
     <Layout>
       <div className="py-12">
-        <div className="container max-w-6xl mx-auto">
+        <div className="container max-w-7xl mx-auto">
           <Link href="/">
             <Button variant="ghost" className="mb-4 gap-2">
               <ArrowLeft className="h-4 w-4" />
@@ -375,29 +456,35 @@ export default function ThemaPage() {
             <p className="text-muted-foreground">{content.verschillen}</p>
           </div>
 
-          {/* Vergelijkingstabel */}
+          {/* Vergelijkingstabel - 4 kolommen */}
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4">Standpunten per Partij</h2>
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
+              <table className="w-full border-collapse min-w-[800px]">
                 <thead>
                   <tr className="bg-muted">
-                    <th className="border p-3 text-left font-semibold w-1/3">
+                    <th className="border p-3 text-left font-semibold w-1/4">
                       <div className="flex items-center justify-between">
                         <span>BIJ1</span>
-                        <Badge variant="outline" className="ml-2">Radicaal</Badge>
+                        <Badge variant="outline" className="ml-2 text-xs">Radicaal</Badge>
                       </div>
                     </th>
-                    <th className="border p-3 text-left font-semibold w-1/3">
+                    <th className="border p-3 text-left font-semibold w-1/4">
                       <div className="flex items-center justify-between">
                         <span>SP</span>
-                        <Badge variant="outline" className="ml-2">Socialistisch</Badge>
+                        <Badge variant="outline" className="ml-2 text-xs">Socialistisch</Badge>
                       </div>
                     </th>
-                    <th className="border p-3 text-left font-semibold w-1/3">
+                    <th className="border p-3 text-left font-semibold w-1/4">
                       <div className="flex items-center justify-between">
-                        <span>GroenLinks-PvdA</span>
-                        <Badge variant="outline" className="ml-2">Progressief</Badge>
+                        <span>GL-PvdA</span>
+                        <Badge variant="outline" className="ml-2 text-xs">Progressief</Badge>
+                      </div>
+                    </th>
+                    <th className="border p-3 text-left font-semibold w-1/4">
+                      <div className="flex items-center justify-between">
+                        <span>PvdD</span>
+                        <Badge variant="outline" className="ml-2 text-xs">Ecocentrisch</Badge>
                       </div>
                     </th>
                   </tr>
@@ -451,6 +538,23 @@ export default function ThemaPage() {
                         <div className="mt-4 pt-3 border-t">
                           <p className="text-sm font-semibold text-muted-foreground">
                             {content.glpvda.kosten}
+                          </p>
+                        </div>
+                      )}
+                    </td>
+                    <td className="border p-4 align-top bg-muted/20">
+                      <ul className="space-y-2 text-sm">
+                        {content.pvdd.standpunten.map((punt, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-primary flex-shrink-0">•</span>
+                            <span>{punt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {content.pvdd.kosten && (
+                        <div className="mt-4 pt-3 border-t">
+                          <p className="text-sm font-semibold text-muted-foreground">
+                            {content.pvdd.kosten}
                           </p>
                         </div>
                       )}

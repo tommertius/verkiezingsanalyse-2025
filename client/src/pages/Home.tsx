@@ -17,7 +17,7 @@ export default function Home() {
               Verkiezingsprogramma's 2025
             </h1>
             <p className="text-xl text-muted-foreground mb-6">
-              Diepgaande analyse van BIJ1, SP en GroenLinks-PvdA
+              Diepgaande analyse van BIJ1, SP, GroenLinks-PvdA en Partij voor de Dieren
             </p>
             <p className="text-lg mb-8">
               Waar staan deze partijen voor? Hoe verschillen ze ideologisch? En wat is financieel haalbaar?
@@ -48,7 +48,7 @@ export default function Home() {
           </h2>
           
           {/* Desktop: Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {partijen.map((partij) => {
               const ideologie = ideologischeVerschillen[partij.id as keyof typeof ideologischeVerschillen];
               return (
@@ -92,8 +92,8 @@ export default function Home() {
             })}
           </div>
 
-          {/* Mobile: Horizontal Scroll */}
-          <div className="md:hidden overflow-x-auto -mx-4 px-4">
+          {/* Mobile & Tablet: Horizontal Scroll */}
+          <div className="lg:hidden overflow-x-auto -mx-4 px-4">
             <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
               {partijen.map((partij) => {
                 const ideologie = ideologischeVerschillen[partij.id as keyof typeof ideologischeVerschillen];
@@ -144,7 +144,7 @@ export default function Home() {
             <p className="text-muted-foreground max-w-3xl mx-auto">
               De keuze tussen deze partijen is geen keuze tussen links en rechts, maar een keuze{' '}
               <span className="font-semibold">binnen</span> links: tussen fundamentele systeemkritiek (BIJ1),
-              krachtige socialistische herverdeling (SP) en pragmatisch progressivisme (GroenLinks-PvdA).
+              krachtige socialistische herverdeling (SP), pragmatisch progressivisme (GroenLinks-PvdA) en ecocentrisch denken (PvdD).
             </p>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function Home() {
           </p>
           
           {/* Desktop: Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {partijen.map((partij) => {
               const score = financieleScores[partij.id as keyof typeof financieleScores];
               const Icon = score.score >= 7 ? CheckCircle2 : score.score >= 5 ? AlertCircle : XCircle;
@@ -208,8 +208,8 @@ export default function Home() {
             })}
           </div>
 
-          {/* Mobile: Horizontal Scroll */}
-          <div className="md:hidden overflow-x-auto -mx-4 px-4">
+          {/* Mobile & Tablet: Horizontal Scroll */}
+          <div className="lg:hidden overflow-x-auto -mx-4 px-4">
             <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
               {partijen.map((partij) => {
                 const score = financieleScores[partij.id as keyof typeof financieleScores];
@@ -292,7 +292,7 @@ export default function Home() {
           </p>
 
           {/* Desktop: Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {partijen.map((partij) => {
               const impact = kamerImpact[partij.id as keyof typeof kamerImpact];
               return (
@@ -336,8 +336,8 @@ export default function Home() {
             })}
           </div>
 
-          {/* Mobile: Horizontal Scroll */}
-          <div className="md:hidden overflow-x-auto -mx-4 px-4">
+          {/* Mobile & Tablet: Horizontal Scroll */}
+          <div className="lg:hidden overflow-x-auto -mx-4 px-4">
             <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
               {partijen.map((partij) => {
                 const impact = kamerImpact[partij.id as keyof typeof kamerImpact];

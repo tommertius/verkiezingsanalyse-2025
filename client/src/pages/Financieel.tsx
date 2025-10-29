@@ -24,7 +24,7 @@ export default function Financieel() {
                 ESB-doorrekening van de SP is het beeld compleet. <strong>GroenLinks-PvdA heeft het
                 enige financieel haalbare programma</strong> met een verbetering van het overheidssaldo.
                 <strong> De SP heeft een tekort van €23 miljard</strong> volgens onafhankelijke doorrekening.
-                <strong> BIJ1 heeft geen doorrekening</strong> en minimale financiële onderbouwing.
+                <strong> BIJ1 en PvdD hebben geen doorrekening</strong> en minimale financiële onderbouwing.
               </p>
               
               <div className="overflow-x-auto">
@@ -82,6 +82,21 @@ export default function Financieel() {
                         <span className="inline-flex items-center gap-1 font-bold text-red-600">
                           <XCircle className="h-4 w-4" />
                           2/10
+                        </span>
+                      </td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="p-2 font-semibold">Partij voor de Dieren</td>
+                      <td className="p-2">
+                        <Badge variant="outline">Geen</Badge>
+                      </td>
+                      <td className="text-right p-2">Onbekend</td>
+                      <td className="text-right p-2">Onbekend</td>
+                      <td className="text-right p-2 text-orange-600 font-semibold">Onbekend</td>
+                      <td className="text-center p-2">
+                        <span className="inline-flex items-center gap-1 font-bold text-orange-600">
+                          <AlertCircle className="h-4 w-4" />
+                          3/10
                         </span>
                       </td>
                     </tr>
@@ -397,6 +412,72 @@ export default function Financieel() {
             </Card>
           </section>
 
+          {/* PvdD */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
+              <AlertCircle className="h-8 w-8 text-orange-600" />
+              Partij voor de Dieren: Onzeker
+            </h2>
+
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle>Financiële Transparantie</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  De Partij voor de Dieren heeft <strong>geen financiële doorrekening</strong> en noemt in het
+                  programma <strong>geen concrete bedragen</strong> voor uitgaven of inkomsten. Het programma
+                  focust op <strong>systeemverandering en welzijn boven welvaart</strong>, waarbij financiële
+                  haalbaarheid niet centraal staat.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle>Belangrijkste Voorstellen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>CO₂-belasting omhoog</strong> - geen bedrag genoemd</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>BTW op gezond eten naar 0%</strong> - geen kostenraming</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>Radicale verkleining bio-industrie</strong> - geen transitiekosten genoemd</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>Nieuwe bossen en natuurherstel</strong> - geen investeringsbedrag</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>Omscholing naar groene banen</strong> - geen budget</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-orange-50 border-orange-200">
+              <CardHeader>
+                <CardTitle>Conclusie PvdD</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  <strong>Score: 3/10</strong> - Geen doorrekening, geen concrete cijfers. Het programma
+                  is gericht op maatschappelijke verandering met focus op dieren, natuur en klimaat.
+                  Financiële haalbaarheid is onzeker, maar minder radicaal dan BIJ1. De partij zou baat
+                  hebben bij een doorrekening om kiezers duidelijkheid te geven.
+                </p>
+              </CardContent>
+            </Card>
+          </section>
+
           {/* Conclusie */}
           <section className="mt-12">
             <h2 className="text-3xl font-bold mb-6">Eindconclusie</h2>
@@ -414,10 +495,14 @@ export default function Financieel() {
                   <strong>BIJ1 heeft geen enkele doorrekening</strong> en minimale financiële onderbouwing.
                   Het programma is volledig onhaalbaar.
                 </p>
+                <p>
+                  <strong>Partij voor de Dieren heeft geen cijfers</strong> maar focust op systeemverandering.
+                  Haalbaarheid is onzeker door gebrek aan financiële onderbouwing.
+                </p>
                 <div className="pt-4 border-t">
                   <p className="font-semibold">Aanbeveling voor kiezers:</p>
                   <p className="text-sm text-muted-foreground">
-                    Vraag ook SP en BIJ1 om een volledige CPB-doorrekening. Pas dan kunnen kiezers een eerlijke
+                    Vraag ook SP, BIJ1 en PvdD om een volledige CPB-doorrekening. Pas dan kunnen kiezers een eerlijke
                     vergelijking maken tussen de programma's.
                   </p>
                 </div>

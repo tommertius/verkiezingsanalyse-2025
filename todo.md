@@ -56,3 +56,11 @@
 - [ ] Zoekfunctie voor content
 - [ ] Print-versie van analyses
 - [ ] Social sharing buttons
+
+## Partij voor de Dieren Toevoegen
+- [x] Analyseer PvdD verkiezingsprogramma
+- [x] Voeg PvdD toe aan content.ts (ideologie, financieel, kamer impact)
+- [x] Update homepage met PvdD card (4 partijen)
+- [x] Update alle thema pagina's met PvdD kolom
+- [x] Zoek peilingdata voor PvdD (2-4 zetels)
+- [x] Update financiële analyse pagina met PvdD
