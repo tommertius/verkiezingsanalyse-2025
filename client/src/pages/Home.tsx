@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/10 to-white py-16">
+      <section className="bg-gradient-to-b from-primary/5 to-white py-20 md:py-24">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* Ideologische Verschillen */}
-      <section className="py-16 bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Hoe Verschillen de Partijen Ideologisch?
@@ -52,7 +52,7 @@ export default function Home() {
             {partijen.map((partij) => {
               const ideologie = ideologischeVerschillen[partij.id as keyof typeof ideologischeVerschillen];
               return (
-                <Card key={partij.id} className="border-2 hover:shadow-lg transition-shadow">
+                <Card key={partij.id} className="border hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between">
                       <span>{partij.naam}</span>
@@ -98,7 +98,7 @@ export default function Home() {
               {partijen.map((partij) => {
                 const ideologie = ideologischeVerschillen[partij.id as keyof typeof ideologischeVerschillen];
                 return (
-                  <Card key={partij.id} className="border-2 flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
+                  <Card key={partij.id} className="border flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
                     <CardHeader>
                       <CardTitle className="flex items-center justify-between">
                         <span>{partij.naam}</span>
@@ -151,7 +151,7 @@ export default function Home() {
       </section>
 
       {/* Financiële Haalbaarheid */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-20 md:py-24 bg-muted/30">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">
             Realisme en Financiële Haalbaarheid
@@ -168,7 +168,7 @@ export default function Home() {
               const iconColor = score.score >= 7 ? 'text-green-600' : score.score >= 5 ? 'text-yellow-600' : 'text-red-600';
               
               return (
-                <Card key={partij.id} className="border-2">
+                <Card key={partij.id} className="border">
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between">
                       <span>{partij.naam}</span>
@@ -217,7 +217,7 @@ export default function Home() {
                 const iconColor = score.score >= 7 ? 'text-green-600' : score.score >= 5 ? 'text-yellow-600' : 'text-red-600';
                 
                 return (
-                  <Card key={partij.id} className="border-2 flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
+                  <Card key={partij.id} className="border flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
                     <CardHeader>
                       <CardTitle className="flex items-center justify-between">
                         <span>{partij.naam}</span>
@@ -271,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* Impact in de Kamer */}
-      <section className="py-16 bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">
             Wat Betekenen Ze in de Kamer?
@@ -296,7 +296,7 @@ export default function Home() {
             {partijen.map((partij) => {
               const impact = kamerImpact[partij.id as keyof typeof kamerImpact];
               return (
-                <Card key={partij.id} className="border-2">
+                <Card key={partij.id} className="border">
                   <CardHeader>
                     <CardTitle>{partij.naam}</CardTitle>
                     <CardDescription className="space-y-1">
@@ -342,7 +342,7 @@ export default function Home() {
               {partijen.map((partij) => {
                 const impact = kamerImpact[partij.id as keyof typeof kamerImpact];
                 return (
-                  <Card key={partij.id} className="border-2 flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
+                  <Card key={partij.id} className="border flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
                     <CardHeader>
                       <CardTitle>{partij.naam}</CardTitle>
                       <CardDescription className="space-y-1">
@@ -387,7 +387,7 @@ export default function Home() {
       </section>
 
       {/* Thema's Grid */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-20 md:py-24 bg-muted/30">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Verken de Thema's
@@ -395,7 +395,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {themas.map((thema) => (
               <Link key={thema.id} href={`/thema/${thema.id}`}>
-                <Card className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary/50 h-full">
+                <Card className="hover:shadow-lg transition-all cursor-pointer border hover:border-primary/50 h-full">
                   <CardHeader>
                     <div className="text-4xl mb-2">{thema.icon}</div>
                     <CardTitle className="text-lg">{thema.titel}</CardTitle>
@@ -411,7 +411,7 @@ export default function Home() {
       </section>
 
       {/* Quick Comparison: Belastingen Bedrijven */}
-      <section className="py-16 bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Belastingen voor Bedrijven
@@ -472,7 +472,7 @@ export default function Home() {
       </section>
 
       {/* Quick Comparison: Wooncrisis */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-20 md:py-24 bg-muted/30">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Oplossen Wooncrisis

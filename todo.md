@@ -73,3 +73,21 @@
 - [x] Voeg thema toe aan content.ts
 - [x] Voeg thema card toe aan homepage (automatisch via themas array)
 - [x] Maak themapagina voor Samenleving & Inclusie
+
+## Engelse Versie (Separate Site)
+- [ ] Kopieer project naar election-analysis-2025
+- [ ] Vertaal alle UI teksten in componenten
+- [ ] Vertaal content.ts (partijen, ideologie, scores, kamer impact)
+- [ ] Vertaal Home.tsx (alle secties)
+- [ ] Vertaal ThemaPage.tsx (alle 9 thema's)
+- [ ] Vertaal Financieel.tsx
+- [ ] Update package.json en metadata
+- [ ] Test alle functionaliteit
+- [ ] Deploy als aparte site
+
+## Styling Updates - Klassieke Krant Stijl
+- [x] Meer padding in cards voor ruimer gevoel (py-8, px-8)
+- [x] Subtielere kleuren en borders (border ipv border-2, subtielere geel)
+- [x] Klassieke krant-achtige typografie (line-height 1.7, letter-spacing)
+- [x] Inspiratie van Volkskrant stemchecker
+- [x] Elegantere spacing en witruimte (py-20 md:py-24)
