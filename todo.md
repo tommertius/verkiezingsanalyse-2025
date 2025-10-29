@@ -91,3 +91,18 @@
 - [x] Klassieke krant-achtige typografie (line-height 1.7, letter-spacing)
 - [x] Inspiratie van Volkskrant stemchecker
 - [x] Elegantere spacing en witruimte (py-20 md:py-24)
+
+## Thema Illustraties
+- [x] Genereer eerste versie illustraties
+- [x] Herzie illustraties: consistenter, volwassener, gevulde vlakken (v2)
+- [x] Migratie en Samenleving zijn perfect (v2)
+- [ ] Herzie eerste 7 met stijl van migratie/samenleving (v3)
+- [ ] Wonen illustratie (v3)
+- [ ] Zorg illustratie (v3)
+- [ ] Werk & Loon illustratie (v3)
+- [ ] Belastingen illustratie (v3)
+- [ ] Onderwijs illustratie (v3)
+- [ ] Klimaat illustratie (v3)
+- [ ] Buitenland illustratie (v3)
+- [ ] Gebruiker keurt illustraties goed
+- [ ] Integreer illustraties in thema cards
