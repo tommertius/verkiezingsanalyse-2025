@@ -157,3 +157,6 @@
 
 ## Bug Fixes
 - [x] Scroll to top when navigating to new page
+
+## GitHub
+- [ ] Commit en push taalschakelaar en scroll-to-top naar GitHub
