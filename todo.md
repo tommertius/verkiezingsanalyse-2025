@@ -45,6 +45,12 @@
 - [ ] SEO meta tags (optioneel)
 - [ ] Print-vriendelijke styling (optioneel)
 
+## Nieuwe Features (Gebruiker Feedback)
+- [x] Thema pagina's: partijen naast elkaar in vergelijkingstabel
+- [x] Navigatie andere thema's: kleinere pill-shaped buttons
+- [x] Zetelvoorspelling: update met links naar laatste peilingen
+- [x] Mobiele swipe: horizontaal scrollen door partij-cards
+
 ## Mogelijke Verbeteringen
 - [ ] Interactieve grafieken voor budgetten
 - [ ] Zoekfunctie voor content

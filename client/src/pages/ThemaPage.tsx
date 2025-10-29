@@ -338,7 +338,7 @@ export default function ThemaPage() {
   return (
     <Layout>
       <div className="py-12">
-        <div className="article-container">
+        <div className="container max-w-6xl mx-auto">
           <Link href="/">
             <Button variant="ghost" className="mb-4 gap-2">
               <ArrowLeft className="h-4 w-4" />
@@ -375,99 +375,106 @@ export default function ThemaPage() {
             <p className="text-muted-foreground">{content.verschillen}</p>
           </div>
 
-          {/* Partij standpunten */}
-          <div className="space-y-6">
-            <Card className="border-2">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle>BIJ1</CardTitle>
-                  <Badge variant="outline">Radicaal Links</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {content.bij1.standpunten.map((punt, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-primary">•</span>
-                      <span>{punt}</span>
-                    </li>
-                  ))}
-                </ul>
-                {content.bij1.kosten && (
-                  <div className="mt-4 pt-4 border-t">
-                    <p className="text-sm text-muted-foreground">
-                      <strong>Kosten:</strong> {content.bij1.kosten}
-                    </p>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-
-            <Card className="border-2">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle>SP</CardTitle>
-                  <Badge variant="outline">Socialistisch</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {content.sp.standpunten.map((punt, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-primary">•</span>
-                      <span>{punt}</span>
-                    </li>
-                  ))}
-                </ul>
-                {content.sp.kosten && (
-                  <div className="mt-4 pt-4 border-t">
-                    <p className="text-sm text-muted-foreground">
-                      <strong>Kosten:</strong> {content.sp.kosten}
-                    </p>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-
-            <Card className="border-2">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle>GroenLinks-PvdA</CardTitle>
-                  <Badge variant="outline">Progressief</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {content.glpvda.standpunten.map((punt, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-primary">•</span>
-                      <span>{punt}</span>
-                    </li>
-                  ))}
-                </ul>
-                {content.glpvda.kosten && (
-                  <div className="mt-4 pt-4 border-t">
-                    <p className="text-sm text-muted-foreground">
-                      <strong>Kosten:</strong> {content.glpvda.kosten}
-                    </p>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+          {/* Vergelijkingstabel */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-4">Standpunten per Partij</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="border p-3 text-left font-semibold w-1/3">
+                      <div className="flex items-center justify-between">
+                        <span>BIJ1</span>
+                        <Badge variant="outline" className="ml-2">Radicaal</Badge>
+                      </div>
+                    </th>
+                    <th className="border p-3 text-left font-semibold w-1/3">
+                      <div className="flex items-center justify-between">
+                        <span>SP</span>
+                        <Badge variant="outline" className="ml-2">Socialistisch</Badge>
+                      </div>
+                    </th>
+                    <th className="border p-3 text-left font-semibold w-1/3">
+                      <div className="flex items-center justify-between">
+                        <span>GroenLinks-PvdA</span>
+                        <Badge variant="outline" className="ml-2">Progressief</Badge>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border p-4 align-top">
+                      <ul className="space-y-2 text-sm">
+                        {content.bij1.standpunten.map((punt, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-primary flex-shrink-0">•</span>
+                            <span>{punt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {content.bij1.kosten && (
+                        <div className="mt-4 pt-3 border-t">
+                          <p className="text-sm font-semibold text-muted-foreground">
+                            {content.bij1.kosten}
+                          </p>
+                        </div>
+                      )}
+                    </td>
+                    <td className="border p-4 align-top bg-muted/20">
+                      <ul className="space-y-2 text-sm">
+                        {content.sp.standpunten.map((punt, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-primary flex-shrink-0">•</span>
+                            <span>{punt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {content.sp.kosten && (
+                        <div className="mt-4 pt-3 border-t">
+                          <p className="text-sm font-semibold text-muted-foreground">
+                            {content.sp.kosten}
+                          </p>
+                        </div>
+                      )}
+                    </td>
+                    <td className="border p-4 align-top">
+                      <ul className="space-y-2 text-sm">
+                        {content.glpvda.standpunten.map((punt, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-primary flex-shrink-0">•</span>
+                            <span>{punt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {content.glpvda.kosten && (
+                        <div className="mt-4 pt-3 border-t">
+                          <p className="text-sm font-semibold text-muted-foreground">
+                            {content.glpvda.kosten}
+                          </p>
+                        </div>
+                      )}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          {/* Navigation to other themes */}
+          {/* Navigation to other themes - Pill shaped buttons */}
           <div className="mt-12 pt-8 border-t">
             <h3 className="font-semibold mb-4">Andere Thema's</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="flex flex-wrap gap-2">
               {themas.filter(t => t.id !== themaId).map((t) => (
                 <Link key={t.id} href={`/thema/${t.id}`}>
-                  <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
-                    <CardContent className="p-4">
-                      <div className="text-2xl mb-1">{t.icon}</div>
-                      <p className="text-sm font-medium">{t.titel}</p>
-                    </CardContent>
-                  </Card>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    className="rounded-full gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <span>{t.icon}</span>
+                    <span>{t.titel}</span>
+                  </Button>
                 </Link>
               ))}
             </div>

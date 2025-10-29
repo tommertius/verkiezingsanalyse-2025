@@ -141,8 +141,9 @@ export const financieleScores = {
 
 export const kamerImpact = {
   bij1: {
-    zetels: '1-2 zetels verwacht',
-    rol: 'Activistische oppositie',
+    zetels: '0-1 zetels (Peilingwijzer 28 okt)',
+    peilingUrl: 'https://peilingwijzer.tomlouwerse.nl/',
+    rol: 'Activistische oppositie (indien vertegenwoordigd)',
     agendapunten: [
       'Antiracisme en dekolonisatie op de agenda',
       'Aandacht voor intersectionele ongelijkheid',
@@ -150,10 +151,11 @@ export const kamerImpact = {
       'Stem voor meest kwetsbare groepen',
       'Radicale alternatieven in het debat'
     ],
-    effect: 'Verschuift het Overton-venster naar links en brengt onderwerpen als institutioneel racisme en dekolonisatie in het debat'
+    effect: 'Verschuift het Overton-venster naar links en brengt onderwerpen als institutioneel racisme en dekolonisatie in het debat. Let op: volgens laatste peilingen is het onzeker of BIJ1 in de Kamer komt.'
   },
   sp: {
-    zetels: '8-12 zetels verwacht',
+    zetels: '3-5 zetels (Peilingwijzer 28 okt)',
+    peilingUrl: 'https://peilingwijzer.tomlouwerse.nl/',
     rol: 'Socialistische oppositie',
     agendapunten: [
       'Wooncrisis als prioriteit (Woonfonds €30 miljard)',
@@ -162,11 +164,12 @@ export const kamerImpact = {
       'Minimumloon €18/uur',
       'Kritiek op EU en NAVO'
     ],
-    effect: 'Sterke stem voor herverdeling en publieke voorzieningen, dwingt andere partijen tot scherpere standpunten over ongelijkheid'
+    effect: 'Sterke stem voor herverdeling en publieke voorzieningen, dwingt andere partijen tot scherpere standpunten over ongelijkheid. Fors zetelverlies ten opzichte van vorige verkiezingen.'
   },
   glpvda: {
-    zetels: '25-30 zetels verwacht',
-    rol: 'Grootste oppositiepartij',
+    zetels: '22-26 zetels (Peilingwijzer 28 okt)',
+    peilingUrl: 'https://peilingwijzer.tomlouwerse.nl/',
+    rol: 'Grootste of tweede partij',
     agendapunten: [
       'Klimaat en duurzaamheid',
       'Sociaal-economische hervormingen',
@@ -174,6 +177,6 @@ export const kamerImpact = {
       'Investeringen in onderwijs en zorg',
       'Progressieve belastinghervorming'
     ],
-    effect: 'Realistische kans op regeringsdeelname of gedoogconstructie, kan daadwerkelijk beleid beïnvloeden'
+    effect: 'Een van de grootste partijen met 22-26 zetels. Realistische kans op regeringsdeelname of gedoogconstructie, kan daadwerkelijk beleid beïnvloeden. Nek-aan-nek race met D66 en PVV.'
   }
 };

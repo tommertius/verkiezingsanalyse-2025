@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import { partijen, themas, ideologischeVerschillen, financieleScores, kamerImpact } from '@/lib/content';
-import { ArrowRight, CheckCircle2, XCircle, AlertCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle2, XCircle, AlertCircle, ExternalLink } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -46,7 +46,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">
             Hoe Verschillen de Partijen Ideologisch?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6">
             {partijen.map((partij) => {
               const ideologie = ideologischeVerschillen[partij.id as keyof typeof ideologischeVerschillen];
               return (
@@ -89,6 +91,55 @@ export default function Home() {
               );
             })}
           </div>
+
+          {/* Mobile: Horizontal Scroll */}
+          <div className="md:hidden overflow-x-auto -mx-4 px-4">
+            <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
+              {partijen.map((partij) => {
+                const ideologie = ideologischeVerschillen[partij.id as keyof typeof ideologischeVerschillen];
+                return (
+                  <Card key={partij.id} className="border-2 flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
+                    <CardHeader>
+                      <CardTitle className="flex items-center justify-between">
+                        <span>{partij.naam}</span>
+                        <Badge variant="outline">{partij.ideologie}</Badge>
+                      </CardTitle>
+                      <CardDescription className="text-base font-medium">
+                        {ideologie.positie}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-sm font-semibold mb-2">Kernwaarden:</p>
+                          <div className="flex flex-wrap gap-1">
+                            {ideologie.kernwaarden.map((waarde) => (
+                              <Badge key={waarde} variant="secondary" className="text-xs">
+                                {waarde}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold mb-2">Belangrijkste standpunten:</p>
+                          <ul className="text-sm space-y-1 text-muted-foreground">
+                            {ideologie.kenmerken.slice(0, 3).map((kenmerk, i) => (
+                              <li key={i} className="flex gap-2">
+                                <span className="text-primary">•</span>
+                                <span>{kenmerk}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe om te vergelijken →</p>
+          </div>
+
           <div className="mt-8 text-center">
             <p className="text-muted-foreground max-w-3xl mx-auto">
               De keuze tussen deze partijen is geen keuze tussen links en rechts, maar een keuze{' '}
@@ -108,7 +159,9 @@ export default function Home() {
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
             Gebaseerd op CPB-doorrekening (GroenLinks-PvdA) en ESB-doorrekening (SP)
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6">
             {partijen.map((partij) => {
               const score = financieleScores[partij.id as keyof typeof financieleScores];
               const Icon = score.score >= 7 ? CheckCircle2 : score.score >= 5 ? AlertCircle : XCircle;
@@ -154,6 +207,58 @@ export default function Home() {
               );
             })}
           </div>
+
+          {/* Mobile: Horizontal Scroll */}
+          <div className="md:hidden overflow-x-auto -mx-4 px-4">
+            <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
+              {partijen.map((partij) => {
+                const score = financieleScores[partij.id as keyof typeof financieleScores];
+                const Icon = score.score >= 7 ? CheckCircle2 : score.score >= 5 ? AlertCircle : XCircle;
+                const iconColor = score.score >= 7 ? 'text-green-600' : score.score >= 5 ? 'text-yellow-600' : 'text-red-600';
+                
+                return (
+                  <Card key={partij.id} className="border-2 flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
+                    <CardHeader>
+                      <CardTitle className="flex items-center justify-between">
+                        <span>{partij.naam}</span>
+                        <Icon className={`h-6 w-6 ${iconColor}`} />
+                      </CardTitle>
+                      <CardDescription>
+                        Score: <span className="font-bold text-lg">{score.score}/10</span>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <div className="grid grid-cols-2 gap-2 text-sm">
+                        <div>
+                          <p className="text-muted-foreground">Uitgaven</p>
+                          <p className="font-semibold">{score.uitgaven}</p>
+                        </div>
+                        <div>
+                          <p className="text-muted-foreground">Inkomsten</p>
+                          <p className="font-semibold">{score.inkomsten}</p>
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-muted-foreground text-sm">Tekort</p>
+                        <p className="font-semibold">{score.tekort}</p>
+                      </div>
+                      <div>
+                        <p className="text-muted-foreground text-sm">Doorrekening</p>
+                        <Badge variant={score.doorrekening === 'CPB (officieel)' ? 'default' : 'secondary'}>
+                          {score.doorrekening}
+                        </Badge>
+                      </div>
+                      <div className="pt-2 border-t">
+                        <p className="text-sm text-muted-foreground">{score.oordeel}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe om te vergelijken →</p>
+          </div>
+
           <div className="mt-8 text-center">
             <Link href="/financieel">
               <Button size="lg" variant="outline" className="gap-2">
@@ -171,10 +276,23 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-4 text-center">
             Wat Betekenen Ze in de Kamer?
           </h2>
-          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-2 max-w-2xl mx-auto">
             Vooral voor kleine, activistische partijen: welke onderwerpen komen op de agenda?
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <p className="text-center text-sm mb-8">
+            <a 
+              href="https://peilingwijzer.tomlouwerse.nl/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline inline-flex items-center gap-1"
+            >
+              Bron: Peilingwijzer 28 oktober 2025
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          </p>
+
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6">
             {partijen.map((partij) => {
               const impact = kamerImpact[partij.id as keyof typeof kamerImpact];
               return (
@@ -182,7 +300,17 @@ export default function Home() {
                   <CardHeader>
                     <CardTitle>{partij.naam}</CardTitle>
                     <CardDescription className="space-y-1">
-                      <div className="font-semibold text-foreground">{impact.zetels}</div>
+                      <div className="font-semibold text-foreground">
+                        <a 
+                          href={impact.peilingUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:underline inline-flex items-center gap-1"
+                        >
+                          {impact.zetels}
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      </div>
                       <div className="text-sm">{impact.rol}</div>
                     </CardDescription>
                   </CardHeader>
@@ -206,6 +334,54 @@ export default function Home() {
                 </Card>
               );
             })}
+          </div>
+
+          {/* Mobile: Horizontal Scroll */}
+          <div className="md:hidden overflow-x-auto -mx-4 px-4">
+            <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
+              {partijen.map((partij) => {
+                const impact = kamerImpact[partij.id as keyof typeof kamerImpact];
+                return (
+                  <Card key={partij.id} className="border-2 flex-shrink-0" style={{ width: '85vw', maxWidth: '400px' }}>
+                    <CardHeader>
+                      <CardTitle>{partij.naam}</CardTitle>
+                      <CardDescription className="space-y-1">
+                        <div className="font-semibold text-foreground">
+                          <a 
+                            href={impact.peilingUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:underline inline-flex items-center gap-1"
+                          >
+                            {impact.zetels}
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        </div>
+                        <div className="text-sm">{impact.rol}</div>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div>
+                        <p className="text-sm font-semibold mb-2">Agendapunten:</p>
+                        <ul className="text-sm space-y-1 text-muted-foreground">
+                          {impact.agendapunten.slice(0, 4).map((punt, i) => (
+                            <li key={i} className="flex gap-2">
+                              <span className="text-primary">•</span>
+                              <span>{punt}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="pt-2 border-t">
+                        <p className="text-sm font-semibold mb-1">Effect:</p>
+                        <p className="text-sm text-muted-foreground">{impact.effect}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-2">← Swipe om te vergelijken →</p>
           </div>
         </div>
       </section>
